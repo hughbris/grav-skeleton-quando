@@ -8,4 +8,5 @@ plugins/*
 !plugins/.*
 themes/*
 !themes/.*
+!themes/quando-demo/*
 **/config/security.yaml

@@ -1,0 +1,13 @@
+name: Quando Demo
+version: 0.1.0
+description: Hands off Antimatter child for Quando plugin demo skeleton
+icon: rebel
+author:
+  name: Hugh Barnes
+  email: dev@hubns.com
+# homepage: https://github.com/hughbris/grav-theme-quando-demo
+# demo: http://demo.yoursite.com
+# keywords: grav, theme, etc
+# bugs: https://github.com/hugh-barnes/grav-theme-quando-demo/issues
+# readme: https://github.com/hugh-barnes/grav-theme-quando-demo/blob/develop/README.md
+license: MIT

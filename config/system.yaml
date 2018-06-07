@@ -1,10 +1,15 @@
 absolute_urls: false
 
+languages:
+  supported:
+    - en
+  include_default_lang: false
+
 home:
   alias: '/home'
 
 pages:
-  theme: antimatter
+  theme: quando-demo
   markdown:
     extra: false
   process:

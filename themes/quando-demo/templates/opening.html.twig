@@ -1,0 +1,43 @@
+{% embed 'default.html.twig' %}
+{%- import 'partials/current_status.html.twig' as transforms -%}
+
+{% set open_hours = openhrs.opening.statusAt(date(now)) %}
+{% set hours_formatted = openhrs.opening.formatSchedule(open_hours.hours, 'g.ia', ['.i']) %}
+
+{% set next_time %}
+	{% spaceless %}
+		{% if open_hours.until|date('Ymd') == 'now'|date('Ymd') %} {# today #}
+			at {{ open_hours.until|date('g.ia')|replace({'.00':''}) }}
+		{% elseif open_hours.until|date('Ymd') == 'now'|date_modify('+1 day')|date('Ymd') %} {# 'tomorrow' #}
+			{{ 'PLUGIN_QUANDO.TOMORROW'|t|lower }} at {{ open_hours.until|date('g.ia')|replace({'.00':''}) }}
+		{% else %} {# next open [date, time] #}
+			on {{ open_hours.until|date('D jS, g.ia')|replace({'.00':''}) }} {# FIXME: this pattern isn't internationalised #}
+		{% endif %}
+	{% endspaceless %}
+{% endset %}
+
+{% if open_hours.open %} {# open today o-s[, o-s] #}
+	{% set status_description = 'PLUGIN_QUANDO.OPEN_DESCR'|t|lower %}
+	{% set next_description = ', closing ' ~ next_time %}
+{% else %}
+	{% set status_description = 'PLUGIN_QUANDO.CLOSED_DESCR'|t|lower %}
+	{% set next_description = '.</p><p>We are next open ' ~ next_time %}
+{% endif %}
+
+{% block inner_content %}
+	{# dump(transforms.niceOpenings(open_hours.debug)) #}
+
+	<!-- googleoff: index -->
+		<p><strong>Our amazing place is {{ status_description }}</strong>{{ next_description }}.</p>
+	<!-- googleon: index -->
+
+	{{ page.content }}
+
+	{% include 'partials/hours.html.twig' %}
+	{% include 'partials/hours_exceptions.html.twig' %}
+
+{% endblock %}
+
+{# or see also https://learn.getgrav.org/content/headers#process and set twig to true, which maybe I might as well do #}
+
+{% endembed %}

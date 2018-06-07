@@ -1,7 +1,7 @@
-title: Grav
+title: Quando plugin demo
 author:
-  name: Joe Bloggs
-  email: 'joe@test.com'
+  name: Hugh Barnes
+  # email:
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+    description: 'Quando opening hours plugin for Grav CMS demo'
 

@@ -1,0 +1,46 @@
+<div class="panel contacts">
+
+	<!-- googleoff: index -->
+	<div id="hours" class="highlight" rel="noindex">
+		{% set open_ticker = 'Opening hours' %}
+		{% if config.plugins.quando.enabled %}
+			{% set open_ticker = include('partials/current_status.html.twig', { open_hours: openhrs.opening.statusAt(date(now)) } ) %}
+		{% endif %}
+		<h3><a href="/about/opening" title="All opening hours">{{ open_ticker }}
+		{%- if config.plugins.quando.enabled %}
+			{% set open_now = openhrs.opening.open ? 'PLUGIN_QUANDO.OPEN'|t : 'PLUGIN_QUANDO.CLOSED'|t %}
+			<span class="badge {{ open_now|lower }}">{{ open_now|capitalize }}</span>
+		{% endif -%}</a></h3>
+	</div>
+	<!-- googleon: index -->
+
+	<ul class="list">
+
+		<li class="address">
+			<a href="/about/location">
+				<img class="icon pure-img" alt="Location: " src="{{ url('theme://images/map-pin.png') }}" />
+				<address class="col-sm-offset-1">
+					<strong>1313 Streetwise Road</strong><br/>
+					Addressington<br/>
+					<span class="sr-only">Donde</span>
+				</address>
+			</a>
+		</li>
+
+		<li class="phone">
+			<a href="tel:+6431234567">
+				<img class="icon pure-img" alt="Phone: " src="{{ url('theme://images/phone.png') }}" />
+				<p class="tel">123 4567</p>
+			</a>
+		</li>
+
+		<li class="message">
+			<a href="/contact">
+				<img class="icon pure-img" alt="Contact: " src="{{ url('theme://images/message.png') }}" />
+				<p class="action">Get in touch</p>
+			</a>
+		</li>
+
+	</ul>
+
+</div>
