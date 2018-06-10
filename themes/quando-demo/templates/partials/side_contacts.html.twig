@@ -6,7 +6,7 @@
 		{% if config.plugins.quando.enabled %}
 			{% set open_ticker = include('partials/current_status.html.twig', { open_hours: openhrs.opening.statusAt(date(now)) } ) %}
 		{% endif %}
-		<h3><a href="/about/opening" title="All opening hours">{{ open_ticker }}
+		<h3><a href="/demo" title="All opening hours">{{ open_ticker }}
 		{%- if config.plugins.quando.enabled %}
 			{% set open_now = openhrs.opening.open ? 'PLUGIN_QUANDO.OPEN'|t : 'PLUGIN_QUANDO.CLOSED'|t %}
 			<span class="badge {{ open_now|lower }}">{{ open_now|capitalize }}</span>
@@ -29,7 +29,7 @@
 		<li class="phone">
 			<a href="tel:+6431234567">
 				<img class="icon pure-img" alt="Phone: " src="{{ url('theme://images/open-iconic/svg/phone.svg') }}" />
-				<p class="tel">123 4567</p>
+				<p class="tel">0800-EXAMPLE</p>
 			</a>
 		</li>
 
