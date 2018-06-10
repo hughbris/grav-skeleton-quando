@@ -4,5 +4,5 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - user/themes/quando-demo
-         - user/themes/antimatter
+         - 'user://themes/quando-demo'
+         - 'user://themes/antimatter'
