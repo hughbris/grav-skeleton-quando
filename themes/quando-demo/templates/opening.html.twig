@@ -18,10 +18,10 @@
 
 {% if open_hours.open %} {# open today o-s[, o-s] #}
 	{% set status_description = 'PLUGIN_QUANDO.OPEN_DESCR'|t|lower %}
-	{% set next_description = ', closing ' ~ next_time %}
+	{% set next_description = ', and close at ' ~ next_time %}
 {% else %}
 	{% set status_description = 'PLUGIN_QUANDO.CLOSED_DESCR'|t|lower %}
-	{% set next_description = '.</p><p>We are next open ' ~ next_time %}
+	{% set next_description = '.</p><p>We open again ' ~ next_time %}
 {% endif %}
 
 {% block inner_content %}

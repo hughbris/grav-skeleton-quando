@@ -137,6 +137,43 @@ p {
 	margin-top: 0;
 }
 
+.warning,
+.standout {
+    border-radius: 10px;
+    line-height: 1.5rem;
+    padding: 0.5em;
+    border-bottom: 3px solid;
+}
+
+.standout {
+    border-color: #333;
+    background-color: salmon;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.standout a:link {
+    padding: 0.2rem;
+    border-radius: 5px;
+    background-color: rgba(200, 200, 200, 0.2);
+    white-space: nowrap;
+}
+
+table {
+    margin-bottom: 1rem;
+}
+
+.panel.hours table,
+table.hours {
+    border: none;
+}
+
+.panel.hours thead,
+table.hours thead {
+    /* visibility: collapse; */
+    display: none;
+}
+
 @media (min-device-width: 48em) {
 	.content-wrapper .block {
 		padding-left: 0.9375rem;
