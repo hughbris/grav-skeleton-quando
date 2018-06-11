@@ -10,7 +10,7 @@
 }
 
 .panel > .highlight {
-	background-color: #1BB3E9;
+	background-color: #1bb3e9;
 	padding: 0 0.5em;
 }
 
@@ -24,6 +24,16 @@
 	font-size: inherit;
 }
 
+.highlight h3 a,
+.highlight h3 a:link {
+	color: inherit;
+}
+
+.panel .highlight h4 {
+	line-height: 1.2;
+	/* margin-bottom: 0.5em; */
+}
+
 .panel .highlight h3,
 .panel .highlight h4 {
 	color: lightyellow;
@@ -32,11 +42,6 @@
 	margin: inherit;
 	font-weight: bolder;
 	font-variant: small-caps;
-}
-
-.highlight h3 a,
-.highlight h3 a:link {
-	color: inherit;
 }
 
 .highlight .badge {
@@ -111,10 +116,15 @@
 	height: 2.5em;
 	width: 2.5em;
 	float: left;
-	background-color: white;
+	background-color: #fff;
 	border-radius: 20%;
 	padding: 0.2em;
 	border: thick groove lightyellow;
+}
+
+.panel.hours th[scope="row"],
+table.hours th[scope="row"] {
+	font-weight: normal;
 }
 
 #persistent .panel .list li img + * {
@@ -139,39 +149,124 @@ p {
 
 .warning,
 .standout {
-    border-radius: 10px;
-    line-height: 1.5rem;
-    padding: 0.5em;
-    border-bottom: 3px solid;
+	border-radius: 10px;
+	line-height: 1.5rem;
+	padding: 0.5em;
+	border-bottom: 3px solid;
 }
 
 .standout {
-    border-color: #333;
-    background-color: salmon;
-    font-weight: bolder;
-    font-style: italic;
+	border-color: #333;
+	background-color: salmon;
+	font-weight: bolder;
+	font-style: italic;
 }
 
 .standout a:link {
-    padding: 0.2rem;
-    border-radius: 5px;
-    background-color: rgba(200, 200, 200, 0.2);
-    white-space: nowrap;
+	padding: 0.2rem;
+	border-radius: 5px;
+	background-color: rgba(200, 200, 200, 0.2);
+	white-space: nowrap;
 }
 
 table {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .panel.hours table,
 table.hours {
-    border: none;
+	border: none;
 }
 
 .panel.hours thead,
 table.hours thead {
-    /* visibility: collapse; */
-    display: none;
+	/* visibility: collapse; */
+	display: none;
+}
+
+#supporting .panel:first-child,
+.panel > * {
+	margin-top: 0;
+}
+
+#supporting .panel .highlight h4 {
+	text-align: center;
+	display: block;
+}
+
+h4 {
+	font-size: 1.5625rem;
+}
+
+.panel.hours tbody > tr {
+	margin: auto 0.2em;
+	border-bottom: thin solid #eaeaea;
+}
+
+.hours .current.closed {
+	/* border-left-color: red; */
+	background-color: #f00;
+}
+
+.hours .current {
+	border: none;
+	/* border-left: 3px solid; */
+	opacity: 0.6;
+}
+
+.panel.hours tbody > tr {
+	margin: auto 0.2em;
+	border-bottom: thin solid #eaeaea;
+}
+
+.panel.hours th[scope=row] {
+	background: none;
+	font-weight: normal;
+	padding-right: 0;
+	color: lightyellow;
+}
+
+.panel.hours tbody tr > td {
+	color: #f1f1f1;
+}
+
+.panel.hours table .day {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.panel.hours table .date {
+	display: inline-block;
+	font-size: smaller;
+}
+
+.panel.hours tbody tr > * {
+	line-height: 1.2em;
+	border: none;
+}
+
+ul.context,
+ul.related {
+	margin: 0;
+	list-style-type: none;
+	-webkit-padding-start: 0;
+}
+
+.related li a:link[rel='more'],
+.context li a:link[rel='more'] {
+	background-repeat: no-repeat;
+	background-image: url(../images/open-iconic/svg/grid-four-up.svg);
+	background-size: 1em;
+	background-color: lightslategrey;
+	background-position-x: 0.5em;
+	min-height: 3rem;
+	padding-left: 2rem;
+	background-position-y: center;
+	line-height: 1.75rem;
+	padding: 0.3em;
+	padding-left: 2.5em;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 0 0 0.5em #eaeaea;
 }
 
 @media (min-device-width: 48em) {
@@ -188,6 +283,31 @@ table.hours thead {
 		position: relative;
 		padding: 0;
 		margin: 0;
+	}
+
+	#supporting {
+		margin-right: 0;
+	}
+
+	#supporting .panel {
+		margin: 1rem 0;
+	}
+
+	#supporting .panel .content {
+		background-color: rgba(0, 0, 0, 0.03);
+		margin: 0;
+	}
+
+	.panel .content ul.options.related {
+		text-align: right;
+		/* box-shadow: 0 0 1em #eaeaea; */
+		padding: 0.3em;
+	}
+
+	.panel .content ul.related {
+		list-style: none;
+		/* background-color: #fff; */
+		margin-bottom: inherit;
 	}
 
 	h3 {
@@ -207,6 +327,4 @@ table.hours thead {
 	.tel {
 		white-space: nowrap;
 	}
-
 }
-
