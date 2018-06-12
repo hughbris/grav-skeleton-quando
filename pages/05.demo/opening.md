@@ -2,6 +2,7 @@
 title: Opening hours
 metadata:
   description: "Just an example of an opening hours page, created using the Quando plugin for Grav CMS." # FIXME
+  robots: noindex,follow
 supporting:
   - hours
   # - location
