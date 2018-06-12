@@ -2,7 +2,7 @@
 
 This [Grav CMS](https://getgrav.org) skeleton is just to demo a working [Quando plugin](https://github.com/hughbris/grav-plugin-quando) demo with minimal theme.
 
-The demo is deployed at http://behold.metamotive.co.nz/grav-plugin-quando if you just want to look there without playing with settings and templates.
+The demo is deployed at http://behold.metamotive.co.nz/quando if you just want to look there without playing with settings and templates.
 
 ## Installing
 
