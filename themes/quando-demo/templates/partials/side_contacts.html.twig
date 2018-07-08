@@ -1,14 +1,19 @@
+{% set hours_path = hours_path|default(base_url_relative ~ '/demo') %}
+{% if config.plugins.quando.enabled %}
+	{% set metadata = quando.opening.getTimetable() %} {# TODO: not best way to get just metadata properties #}
+{% endif %}
+
 <div class="panel contacts">
 
 	<!-- googleoff: index -->
 	<div id="hours" class="highlight" rel="noindex">
 		{% set open_ticker = 'Opening hours' %}
 		{% if config.plugins.quando.enabled %}
-			{% set open_ticker = include('partials/current_status.html.twig', { open_hours: openhrs.opening.statusAt(date(now)) } ) %}
+			{% set open_ticker = include('partials/current_status.html.twig', { 'calendar': quando.opening }) %} {# TODO: deprecate service_status parameter, even though we just renamed it, as we'll derive it from calendar #}
 		{% endif %}
-		<h3><a href="/demo" title="All opening hours">{{ open_ticker }}
+		<h3><a href="{{ hours_path }}"{% if config.plugins.quando.enabled %} title="{{ (metadata.labels.all_hours ?: 'PLUGIN_QUANDO.ALL_SERVICE_HOURS')|t }}"{% endif %}>{{ open_ticker }}
 		{%- if config.plugins.quando.enabled %}
-			{% set open_now = openhrs.opening.open ? 'PLUGIN_QUANDO.OPEN'|t : 'PLUGIN_QUANDO.CLOSED'|t %}
+			{% set open_now = quando.opening.available ? metadata.labels.on|t|default('PLUGIN_QUANDO.OPEN'|t) : metadata.labels.off|t|default('PLUGIN_QUANDO.CLOSED'|t) %}
 			<span class="badge {{ open_now|lower }}">{{ open_now|capitalize }}</span>
 		{% endif -%}</a></h3>
 	</div>

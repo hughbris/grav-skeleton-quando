@@ -1,8 +1,8 @@
 {% embed 'default.html.twig' %}
 {%- import 'partials/current_status.html.twig' as transforms -%}
 
-{% set open_hours = openhrs.opening.statusAt(date(now)) %}
-{% set hours_formatted = openhrs.opening.formatSchedule(open_hours.hours, 'g.ia', ['.i']) %}
+{% set open_hours = quando.opening.statusAt(date(now)) %}
+{% set hours_formatted = quando.opening.formatSchedule(open_hours.hours, 'g.ia', ['.i']) %}
 
 {% set next_time %}
 	{% spaceless %}

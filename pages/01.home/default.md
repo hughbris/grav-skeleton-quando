@@ -2,7 +2,7 @@
 title: Home
 ---
 
-This is the homepage of the skeleton that demos the [Quando Grav plugin](https://github.com/hughbris/grav-plugin-quando) to show opening hours.
+This is the homepage of the skeleton that demos the [Quando Grav plugin](https://github.com/hughbris/grav-plugin-quando) to show opening and service hours.
 
 You probably want to skip to the main demo showcase, the [opening hours page](/demo).
 
