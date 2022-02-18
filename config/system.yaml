@@ -42,6 +42,7 @@ errors:
 
 debugger:
   enabled: true
+  provider: debugbar
   twig: true
   shutdown:
     close_connection: true
