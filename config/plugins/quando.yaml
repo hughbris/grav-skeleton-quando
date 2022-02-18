@@ -22,39 +22,46 @@ hours:
         - starts: "10:00"
           stops: "14:15"
     exceptions:
-      '2018-05-12':
+      '2021-05-12':
         hours: []
         comment: 'Banks Peninsula Awareness Day'
-      '2018-06-06':
+      '2021-06-06':
         hours: []
         comment: "Emporer Quinoa's birthday"
-      '2018-06-18':
+      '2021-06-18':
         hours: []
         comment: 'Whacking Day'
-      '2018-07-25':
+      '2021-07-25':
         hours: []
         comment: 'Deliverance Anniversary'
-      '2018-08-24':
+      '2021-08-24':
         hours: # example multi-period below
           - starts: "09:00"
             stops: "12:00"
           - starts: "13:00"
             stops: "16:00"
         comment: 'Staff hoedown'
-      '2018-10-15':
+      '2021-10-15':
         hours: []
         comment: 'Wage slavery acceptance day'
-      '2018-11-19':
+      '2021-11-19':
         hours: []
         comment: 'Example day'
+      '2019-11-17':
+        hours:
+          - starts: "00:06"
+            stops: "00:08"
+          - starts: "00:09"
+            stops: "09:10"
+        comment: 'test day'
     periods:
-      - start: "2018-12-22"
-        finish: "2018-01-12"
+      - start: "2021-12-22"
+        finish: "2021-01-12"
         description: Closed
         name: "Summer break"
         regular: []
-      - start: "2018-12-17"
-        finish: "2018-12-21"
+      - start: "2021-12-17"
+        finish: "2021-12-21"
         description: 'Reduced hours'
         name: "Christmas wind down"
         regular:
@@ -70,7 +77,7 @@ hours:
             - starts: "08:00"
               stops: "12:30"
         exceptions:
-          '2018-12-25':
+          '2021-12-25':
             hours: []
             comment: 'Christmas party!'
     headings:
