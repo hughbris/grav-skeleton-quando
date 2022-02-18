@@ -28,13 +28,13 @@
 	{# dump(transforms.niceOpenings(open_hours.debug)) #}
 
 	<!-- googleoff: index -->
-		<p><strong>Our amazing place is {{ status_description }}</strong>{{ next_description }}.</p>
+		<p><strong>Our amazing place is {{ status_description|raw }}</strong>{{ next_description|raw }}.</p>
 	<!-- googleon: index -->
 
-	{{ page.content }}
+	{{ page.content|raw }}
 
 	{% include 'partials/hours.html.twig' %}
-	{% include 'partials/hours_exceptions.html.twig' %}
+	{% include 'partials/hours_exceptions.html.twig' with {'only_after': 'now'|date_modify('-2 months')|date('Y-m-d'), 'suppress_if_empty': true} %}
 
 {% endblock %}
 
