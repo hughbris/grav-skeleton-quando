@@ -19,4 +19,4 @@ content:
 
 <p class="standout fyi">If you gotta get our service like right now no delay, we have <a href="/resources/after-hours">after hours contacts</a> you should definitely check out ... <-- YES THIS IS A BROKEN LINK, IT'S EXAMPLE/SUGGESTION CONTENT FOR YOU. YOU WEREN'T GOING TO LAUNCH WITH THAT WERE YOU?</p>
 
-We like to keep it nice and regular, but we have our moments and we observe public holidays, secular and religious. Our hours are _IT'S YOUR CONTENT, BUT HERE'S WHERE YOU MIGHT MAKE A VERBAL SUMMARY OF YOUR HOURS_.
+We like to keep a nice and regular vibe, but we have our moments and we observe public holidays, secular and religious. Our hours are _IT'S YOUR CONTENT, BUT HERE'S WHERE YOU MIGHT MAKE A VERBAL SUMMARY OF YOUR HOURS_.
