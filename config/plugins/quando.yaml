@@ -1,10 +1,13 @@
 enabled: true
 warnings: true # show developer warnings in the debug bar
+realtime_updates:
+  enabled: true
+  asset_group: bottom # do not set to use deferred asset feature (Grav x.x+) ::FIXME
 hours:
   opening:
     timezone: "Pacific/Auckland"
     language: en # TODO: this should override any translations in the plugin's templates
-    completed_until: "2018-11-16" # TODO: use this to set alerts for maintainers
+    completed_until: "2021-11-16" # TODO: use this to set alerts for maintainers
     microdata:
       type: ProfessionalService
     regular:
