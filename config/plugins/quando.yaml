@@ -7,7 +7,7 @@ hours:
   opening:
     timezone: "Pacific/Auckland"
     language: en # TODO: this should override any translations in the plugin's templates
-    completed_until: "2021-11-16" # TODO: use this to set alerts for maintainers
+    completed_until: "2023-01-06" # TODO: use this to set alerts for maintainers
     microdata:
       type: ProfessionalService
     regular:
@@ -25,32 +25,32 @@ hours:
         - starts: "10:00"
           stops: "14:15"
     exceptions:
-      '2021-05-12':
+      '2022-05-12':
         hours: []
         comment: 'Banks Peninsula Awareness Day'
-      '2021-06-06':
+      '2022-06-06':
         hours: []
         comment: "Emporer Quinoa's birthday"
-      '2021-06-18':
+      '2022-06-20':
         hours: []
         comment: 'Whacking Day'
-      '2021-07-25':
+      '2022-07-25':
         hours: []
         comment: 'Deliverance Anniversary'
-      '2021-08-24':
+      '2022-08-16':
         hours: # example multi-period below
           - starts: "09:00"
             stops: "12:00"
           - starts: "13:00"
             stops: "16:00"
         comment: 'Staff hoedown'
-      '2021-10-15':
+      '2021-10-18':
         hours: []
         comment: 'Wage slavery acceptance day'
-      '2021-11-19':
+      '2022-11-18':
         hours: []
         comment: 'Example day'
-      '2019-11-17':
+      '2022-11-28':
         hours:
           - starts: "00:06"
             stops: "00:08"
@@ -58,13 +58,13 @@ hours:
             stops: "09:10"
         comment: 'test day'
     periods:
-      - start: "2021-12-22"
-        finish: "2021-01-12"
+      - start: "2022-12-22"
+        finish: "2023-01-06"
         description: Closed
         name: "Summer break"
         regular: []
-      - start: "2021-12-17"
-        finish: "2021-12-21"
+      - start: "2022-12-19"
+        finish: "2022-12-21"
         description: 'Reduced hours'
         name: "Christmas wind down"
         regular:
@@ -80,7 +80,7 @@ hours:
             - starts: "08:00"
               stops: "12:30"
         exceptions:
-          '2021-12-25':
+          '2022-12-25':
             hours: []
             comment: 'Christmas party!'
     headings:
