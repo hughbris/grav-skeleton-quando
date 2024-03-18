@@ -1,0 +1,4 @@
+styles:
+  z-index: 100
+repository: hughbris/grav-plugin-quando
+fill: '#333'

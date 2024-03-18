@@ -1,3 +1,5 @@
+> Demo branch intended for demonstration installations like [Quando demo](https://behold.metamotive.co.nz/quando). Use `develop` branch for a generic skeleton installation.
+
 # Quando plugin demo site Grav skeleton
 
 This [Grav CMS](https://getgrav.org) skeleton is just to demo a working [Quando plugin](https://github.com/hughbris/grav-plugin-quando) demo with minimal theme.

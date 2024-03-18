@@ -2,11 +2,5 @@ accounts/*
 !accounts/.*
 data/*
 !data/.*
-languages/*
-!languages/.*
-plugins/*
-!plugins/.*
-themes/*
-!themes/.*
-!themes/quando-demo/*
+env/quando
 **/config/security.yaml

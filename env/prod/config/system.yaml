@@ -1,0 +1,4 @@
+errors:
+  display: false
+debugger:
+  enabled: true

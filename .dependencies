@@ -1,32 +1,17 @@
 git:
-    admin:
-        url: https://github.com/getgrav/grav-plugin-admin
-        path: user/plugins/admin
-        branch: master
-
     antimatter:
         url: https://github.com/getgrav/grav-theme-antimatter
         path: user/themes/antimatter
         branch: master
 
-    email:
-        url: https://github.com/getgrav/grav-plugin-email
-        path: user/plugins/email
-        branch: master
+    cornercat:
+        url: https://github.com/hughbris/grav-plugin-cornercat
+        path: user/plugins/cornercat
+        branch: develop
 
     error:
         url: https://github.com/getgrav/grav-plugin-error
         path: user/plugins/error
-        branch: master
-    form:
-
-        url: https://github.com/getgrav/grav-plugin-form
-        path: user/plugins/form
-        branch: master
-    login:
-
-        url: https://github.com/getgrav/grav-plugin-login
-        path: user/plugins/login
         branch: master
 
     markdown-notices:
@@ -44,35 +29,25 @@ git:
         path: user/plugins/quando
         branch: develop
 
-links:
-    admin:
-        src: grav-plugin-admin
-        path: user/plugins/admin
-        scm: github
+    sasher:
+        url: https://github.com/hughbris/grav-plugin-sasher
+        path: user/plugins/sasher
+        branch: develop
 
+links:
     antimatter:
         src: grav-theme-antimatter
         path: user/themes/antimatter
         scm: github
 
-    email:
-        src: grav-plugin-email
-        path: user/plugins/email
+    cornercat:
+        src: grav-plugin-cornercat
+        path: user/plugins/cornercat
         scm: github
 
     error:
         src: grav-plugin-error
         path: user/plugins/error
-        scm: github
-
-    form:
-        src: grav-plugin-form
-        path: user/plugins/form
-        scm: github
-
-    login:
-        src: grav-plugin-login
-        path: user/plugins/login
         scm: github
 
     markdown-notices:
@@ -88,4 +63,9 @@ links:
     quando:
         src: grav-plugin-quando
         path: user/plugins/quando
+        scm: github
+
+    sasher:
+        src: grav-plugin-sasher
+        path: user/plugins/sasher
         scm: github
